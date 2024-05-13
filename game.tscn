@@ -3,10 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://4pn774jxveun" path="res://player/player.tscn" id="1_wahra"]
 [ext_resource type="PackedScene" uid="uid://fhnxqqhik7vj" path="res://enemy/enemy.tscn" id="2_3msyf"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_wahra")]
 position = Vector2(145, 281)
 
 [node name="Enemy" parent="." instance=ExtResource("2_3msyf")]
 position = Vector2(809, 496)
+
+[node name="Enemy2" parent="." instance=ExtResource("2_3msyf")]
+position = Vector2(512, 108)
+
+[node name="Enemy3" parent="." instance=ExtResource("2_3msyf")]
+position = Vector2(1145, 217)

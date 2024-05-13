@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const GRAVITY = 200.0
-const JUMP_STRENGTH = -100
+const GRAVITY = 250.0
+const JUMP_STRENGTH = -125
 var speed = 100.0
 var can_jump = true
 var is_game_over = false
