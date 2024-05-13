@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const GRAVITY = 250.0
-const JUMP_STRENGTH = -125
-var speed = 100.0
+const GRAVITY = 200.0
+const JUMP_STRENGTH = -100
+var speed = 75.0
 var can_jump = true
 var is_game_over = false
 
@@ -32,6 +32,8 @@ func _on_jump_cooldown_timeout():
 	can_jump = true
 
 func game_over():
+	if is_game_over:
+		return
 	is_game_over = true
 	velocity = Vector2.DOWN
 	%AnimationPlayer.play("game_over")
