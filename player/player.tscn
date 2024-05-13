@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://4pn774jxveun"]
+
+[ext_resource type="Texture2D" uid="uid://brguird2qsucq" path="res://icon.svg" id="1_6bduq"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_ujr83"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ic455"]
+radius = 25.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ujr83")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, 1.90735e-06)
+scale = Vector2(0.375, 0.365964)
+texture = ExtResource("1_6bduq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ic455")
+
+[node name="JumpCooldown" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+offset = Vector2(250, 0)
+
+[connection signal="timeout" from="JumpCooldown" to="." method="_on_jump_cooldown_timeout"]
