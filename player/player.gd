@@ -9,6 +9,9 @@ var is_game_over = false
 
 @onready var initial_y = global_position.y
 
+func _ready():
+	%AnimationPlayer.play("fly")
+
 func _physics_process(delta):
 	if velocity.y < 300:
 		velocity.y += GRAVITY * delta
@@ -36,4 +39,6 @@ func game_over():
 		return
 	is_game_over = true
 	velocity = Vector2.DOWN
+	%Sprite2D.show()
+	%AnimatedSprite2D.hide()
 	%AnimationPlayer.play("game_over")
