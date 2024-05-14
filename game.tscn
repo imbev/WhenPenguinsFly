@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhsyim1ws7jr7"]
+[gd_scene load_steps=4 format=3 uid="uid://dhsyim1ws7jr7"]
 
 [ext_resource type="PackedScene" uid="uid://bsr7pil8jetlk" path="res://boundary/boundary.tscn" id="1_b1kqk"]
 [ext_resource type="Script" path="res://game.gd" id="1_ivi3b"]
+[ext_resource type="PackedScene" uid="uid://4hc618o25cbk" path="res://background/background.tscn" id="2_i508y"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ivi3b")
+
+[node name="Background" parent="." instance=ExtResource("2_i508y")]
+position = Vector2(1611, 1898)
+scale = Vector2(1.8, 1.8)
 
 [node name="Boundary" parent="." instance=ExtResource("1_b1kqk")]
 unique_name_in_owner = true
