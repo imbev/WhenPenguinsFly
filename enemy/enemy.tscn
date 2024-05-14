@@ -1,21 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://fhnxqqhik7vj"]
 
-[ext_resource type="Texture2D" uid="uid://brguird2qsucq" path="res://icon.svg" id="1_252mm"]
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_usw2t"]
+[ext_resource type="Texture2D" uid="uid://dw6b0qlpqbjdo" path="res://enemy/krosh_ice_main.png" id="2_b05x8"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p4ggh"]
-radius = 17.0
-height = 216.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_cucpr"]
+radius = 65.0
 
 [node name="Enemy" type="Area2D"]
 script = ExtResource("1_usw2t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.265625, 1.6875)
-texture = ExtResource("1_252mm")
+unique_name_in_owner = true
+texture = ExtResource("2_b05x8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_p4ggh")
+shape = SubResource("CircleShape2D_cucpr")
 
 [node name="DespawnTimer" type="Timer" parent="."]
 unique_name_in_owner = true
