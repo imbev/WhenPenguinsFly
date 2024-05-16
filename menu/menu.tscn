@@ -1,0 +1,120 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsma5h03j1xhi"]
+
+[ext_resource type="Script" path="res://menu/MainMenu.gd" id="1_m1axd"]
+[ext_resource type="Script" path="res://menu/SettingsMenu.gd" id="2_5iux5"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="MainMenu" type="VBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+script = ExtResource("1_m1axd")
+
+[node name="Label" type="Label" parent="MarginContainer/MainMenu"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 48
+text = "Penguins Can Fly"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainMenu"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="MarginContainer/MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Play"
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Settings
+"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Exit"
+
+[node name="SettingsMenu" type="VBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("2_5iux5")
+
+[node name="Label" type="Label" parent="MarginContainer/SettingsMenu"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 48
+text = "Penguins Can Fly"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/SettingsMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/SettingsMenu/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Music:"
+
+[node name="CheckButton" type="CheckButton" parent="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/SettingsMenu/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Sound Effects"
+
+[node name="CheckButton" type="CheckButton" parent="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MarginContainer/SettingsMenu/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/MainMenu/VBoxContainer/PlayButton" to="MarginContainer/MainMenu" method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MainMenu/VBoxContainer/SettingsButton" to="MarginContainer/MainMenu" method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MainMenu/VBoxContainer/ExitButton" to="MarginContainer/MainMenu" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/SettingsMenu/VBoxContainer/BackButton" to="MarginContainer/SettingsMenu" method="_on_back_button_pressed"]
