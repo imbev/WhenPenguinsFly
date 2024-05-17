@@ -1,6 +1,7 @@
 extends Node2D
 
-var player
+var player: Player
+@onready var count_down_label = %CountDownLabel
 
 func _ready():
 	player = preload("res://player/player.tscn").instantiate()
@@ -8,11 +9,21 @@ func _ready():
 	add_child(player)
 
 	%Boundary.global_position.x = player.global_position.x
-	
-	%EnemySpawnTimer.start()
 
-func _process(delta):
+func _physics_process(delta):
 	%Boundary.global_position.x = player.global_position.x
+	if player.start_seconds_elapsed == 0:
+		count_down_label.visible = true
+		count_down_label.text = "3"
+	if player.start_seconds_elapsed == 1:
+		count_down_label.text = "2"
+	if player.start_seconds_elapsed == 2:
+		count_down_label.text = "1"
+	if player.start_seconds_elapsed == 3:
+		count_down_label.text = "Start!"
+		%EnemySpawnTimer.start()
+	if player.start_seconds_elapsed == 4:
+		count_down_label.visible = false
 
 
 func _on_enemy_spawn_timer_timeout():
