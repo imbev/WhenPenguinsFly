@@ -2,6 +2,7 @@ extends Node2D
 
 var player: Player
 @onready var count_down_label = %CountDownLabel
+@onready var music_player = %MusicPlayer
 
 func _ready():
 	player = preload("res://player/player.tscn").instantiate()
@@ -9,6 +10,9 @@ func _ready():
 	add_child(player)
 
 	%Boundary.global_position.x = player.global_position.x
+	
+	music_player.play()
+	
 
 func _physics_process(delta):
 	%Boundary.global_position.x = player.global_position.x
@@ -35,3 +39,7 @@ func spawn_enemy():
 	enemy.global_position.x = player.global_position.x + 1200
 	enemy.global_position.y = randf_range(0.0, 648.0)
 	add_child(enemy)
+
+
+func _on_music_player_finished():
+	music_player.play(4)
