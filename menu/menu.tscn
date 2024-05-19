@@ -35,7 +35,7 @@ script = ExtResource("1_m1axd")
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 48
-text = "Penguins Can Fly"
+text = "When Penguins Fly"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -73,7 +73,7 @@ script = ExtResource("2_5iux5")
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 48
-text = "Penguins Can Fly"
+text = "When Penguins Fly"
 horizontal_alignment = 1
 vertical_alignment = 1
 
