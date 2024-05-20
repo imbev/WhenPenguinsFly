@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsma5h03j1xhi"]
+[gd_scene load_steps=4 format=3 uid="uid://dsma5h03j1xhi"]
 
 [ext_resource type="Script" path="res://menu/MainMenu.gd" id="1_m1axd"]
 [ext_resource type="Script" path="res://menu/SettingsMenu.gd" id="2_5iux5"]
+[ext_resource type="Script" path="res://menu/AboutMenu.gd" id="3_7wvdk"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -25,98 +26,169 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="MainMenu" type="VBoxContainer" parent="MarginContainer"]
-unique_name_in_owner = true
-visible = false
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-script = ExtResource("1_m1axd")
+alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/MainMenu"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 1
 theme_override_font_sizes/font_size = 48
 text = "When Penguins Fly"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainMenu"]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="MainMenu" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 24
+script = ExtResource("1_m1axd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MainMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 15
 alignment = 1
 
-[node name="PlayButton" type="Button" parent="MarginContainer/MainMenu/VBoxContainer"]
+[node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer/MainMenu/VBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Play"
 
-[node name="SettingsButton" type="Button" parent="MarginContainer/MainMenu/VBoxContainer"]
+[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer/MainMenu/VBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Settings
 "
 
-[node name="ExitButton" type="Button" parent="MarginContainer/MainMenu/VBoxContainer"]
+[node name="AboutButton" type="Button" parent="MarginContainer/VBoxContainer/MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "About"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer/MainMenu/VBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Exit"
 
-[node name="SettingsMenu" type="VBoxContainer" parent="MarginContainer"]
+[node name="SettingsMenu" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
+theme_override_constants/separation = 24
 script = ExtResource("2_5iux5")
 
-[node name="Label" type="Label" parent="MarginContainer/SettingsMenu"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/SettingsMenu"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 48
-text = "When Penguins Fly"
+theme_override_font_sizes/font_size = 32
+text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/SettingsMenu"]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/SettingsMenu"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/SettingsMenu"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 3
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/SettingsMenu/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/SettingsMenu/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Label" type="Label" parent="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/SettingsMenu/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Music:"
 
-[node name="MusicEnabledButton" type="CheckButton" parent="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer"]
+[node name="MusicEnabledButton" type="CheckButton" parent="MarginContainer/VBoxContainer/SettingsMenu/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/SettingsMenu/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/SettingsMenu/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Label" type="Label" parent="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/SettingsMenu/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 text = "Sound Effects"
 
-[node name="SoundEffectsEnabledButton" type="CheckButton" parent="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer2"]
+[node name="SoundEffectsEnabledButton" type="CheckButton" parent="MarginContainer/VBoxContainer/SettingsMenu/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="BackButton" type="Button" parent="MarginContainer/SettingsMenu/VBoxContainer"]
+[node name="SettingsBackButton" type="Button" parent="MarginContainer/VBoxContainer/SettingsMenu/VBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Back"
 
-[connection signal="pressed" from="MarginContainer/MainMenu/VBoxContainer/PlayButton" to="MarginContainer/MainMenu" method="_on_play_button_pressed"]
-[connection signal="pressed" from="MarginContainer/MainMenu/VBoxContainer/SettingsButton" to="MarginContainer/MainMenu" method="_on_settings_button_pressed"]
-[connection signal="pressed" from="MarginContainer/MainMenu/VBoxContainer/ExitButton" to="MarginContainer/MainMenu" method="_on_exit_button_pressed"]
-[connection signal="toggled" from="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer/MusicEnabledButton" to="MarginContainer/SettingsMenu" method="_on_music_enabled_button_toggled"]
-[connection signal="toggled" from="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer2/SoundEffectsEnabledButton" to="MarginContainer/SettingsMenu" method="_on_sound_effects_enabled_button_toggled"]
-[connection signal="pressed" from="MarginContainer/SettingsMenu/VBoxContainer/BackButton" to="MarginContainer/SettingsMenu" method="_on_back_button_pressed"]
+[node name="AboutMenu" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 24
+script = ExtResource("3_7wvdk")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/AboutMenu"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "About"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/AboutMenu"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/AboutMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/AboutMenu/VBoxContainer"]
+layout_mode = 2
+text = "Copyright (c) 2024 Isaac Beverly
+GNU General Public License Version 3"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/AboutMenu/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/AboutMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "View Source Code at"
+
+[node name="LinkButton" type="LinkButton" parent="MarginContainer/VBoxContainer/AboutMenu/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Codeberg.org"
+uri = "https://codeberg.org/imbev/WhenPenguinsFly"
+
+[node name="AboutBackButton" type="Button" parent="MarginContainer/VBoxContainer/AboutMenu/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MainMenu/VBoxContainer/PlayButton" to="MarginContainer/VBoxContainer/MainMenu" method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MainMenu/VBoxContainer/SettingsButton" to="MarginContainer/VBoxContainer/MainMenu" method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MainMenu/VBoxContainer/AboutButton" to="MarginContainer/VBoxContainer/MainMenu" method="_on_about_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MainMenu/VBoxContainer/ExitButton" to="MarginContainer/VBoxContainer/MainMenu" method="_on_exit_button_pressed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/SettingsMenu/VBoxContainer/HBoxContainer/MusicEnabledButton" to="MarginContainer/VBoxContainer/SettingsMenu" method="_on_music_enabled_button_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/SettingsMenu/VBoxContainer/HBoxContainer2/SoundEffectsEnabledButton" to="MarginContainer/VBoxContainer/SettingsMenu" method="_on_sound_effects_enabled_button_toggled"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/SettingsMenu/VBoxContainer/SettingsBackButton" to="MarginContainer/VBoxContainer/SettingsMenu" method="_on_settings_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/AboutMenu/VBoxContainer/AboutBackButton" to="MarginContainer/VBoxContainer/AboutMenu" method="_on_about_back_button_pressed"]
