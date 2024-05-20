@@ -3,15 +3,21 @@ extends Node2D
 var player: Player
 @onready var count_down_label = %CountDownLabel
 @onready var music_player = %MusicPlayer
+var music_enabled
 
 func _ready():
+	music_enabled = Config.config.get_value(
+		Config.KEY_SECTION, Config.KEY_MUSIC_ENABLED
+	)
+	
 	player = preload("res://player/player.tscn").instantiate()
 	player.global_position = Vector2(180, 324)
 	add_child(player)
 
 	%Boundary.global_position.x = player.global_position.x
 	
-	music_player.play()
+	if music_enabled:
+		music_player.play()
 	
 
 func _physics_process(delta):

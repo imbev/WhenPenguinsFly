@@ -9,13 +9,18 @@ var can_jump = true
 var is_game_over = false
 var start_seconds_elapsed = 0
 
-@onready var audio_player = %AudioStreamPlayer
+@onready var sound_effects_player = %SoundEffectsPlayer
 @onready var start_timer = %StartTimer
 @onready var initial_y = global_position.y
+
+var sound_effects_enabled
 
 func _ready():
 	start_timer.start()
 	%AnimationPlayer.play("fly")
+	sound_effects_enabled = Config.config.get_value(
+		Config.KEY_SECTION, Config.KEY_SOUND_EFFECTS_ENABLED
+	)
 
 func _physics_process(delta):
 	if start_seconds_elapsed < 4:
@@ -32,9 +37,10 @@ func _physics_process(delta):
 		velocity.y += clamp(jump_velocity, -300, 300)
 		can_jump = false
 		%JumpCooldown.start()
-		audio_player.stream = AudioStreamOggVorbis.load_from_file("res://player/sounds/data_sounds_pop.ogg")
-		audio_player.volume_db = -10.0
-		audio_player.play()
+		if sound_effects_enabled:
+			sound_effects_player.stream = AudioStreamOggVorbis.load_from_file("res://player/sounds/data_sounds_pop.ogg")
+			sound_effects_player.volume_db = -10.0
+			sound_effects_player.play()
 	
 	var motion = velocity * delta
 	
@@ -53,9 +59,10 @@ func game_over():
 	%Sprite2D.show()
 	%AnimatedSprite2D.hide()
 	%AnimationPlayer.play("game_over")
-	audio_player.stream = AudioStreamOggVorbis.load_from_file("res://player/sounds/data_sounds_hurt.ogg")
-	audio_player.volume_db = 2.5
-	audio_player.play()
+	if sound_effects_enabled:
+		sound_effects_player.stream = AudioStreamOggVorbis.load_from_file("res://player/sounds/data_sounds_hurt.ogg")
+		sound_effects_player.volume_db = 2.5
+		sound_effects_player.play()
 
 
 func _on_start_timer_timeout():

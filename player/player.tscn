@@ -192,7 +192,7 @@ frame = 1
 [node name="StartTimer" type="Timer" parent="."]
 unique_name_in_owner = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="SoundEffectsPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 
 [connection signal="timeout" from="JumpCooldown" to="." method="_on_jump_cooldown_timeout"]

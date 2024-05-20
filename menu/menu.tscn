@@ -85,7 +85,6 @@ theme_override_constants/separation = 30
 alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/SettingsMenu/VBoxContainer"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 
@@ -93,11 +92,11 @@ size_flags_horizontal = 4
 layout_mode = 2
 text = "Music:"
 
-[node name="CheckButton" type="CheckButton" parent="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer"]
+[node name="MusicEnabledButton" type="CheckButton" parent="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/SettingsMenu/VBoxContainer"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 
@@ -105,7 +104,8 @@ size_flags_horizontal = 4
 layout_mode = 2
 text = "Sound Effects"
 
-[node name="CheckButton" type="CheckButton" parent="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer2"]
+[node name="SoundEffectsEnabledButton" type="CheckButton" parent="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="BackButton" type="Button" parent="MarginContainer/SettingsMenu/VBoxContainer"]
@@ -117,4 +117,6 @@ text = "Back"
 [connection signal="pressed" from="MarginContainer/MainMenu/VBoxContainer/PlayButton" to="MarginContainer/MainMenu" method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MainMenu/VBoxContainer/SettingsButton" to="MarginContainer/MainMenu" method="_on_settings_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MainMenu/VBoxContainer/ExitButton" to="MarginContainer/MainMenu" method="_on_exit_button_pressed"]
+[connection signal="toggled" from="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer/MusicEnabledButton" to="MarginContainer/SettingsMenu" method="_on_music_enabled_button_toggled"]
+[connection signal="toggled" from="MarginContainer/SettingsMenu/VBoxContainer/HBoxContainer2/SoundEffectsEnabledButton" to="MarginContainer/SettingsMenu" method="_on_sound_effects_enabled_button_toggled"]
 [connection signal="pressed" from="MarginContainer/SettingsMenu/VBoxContainer/BackButton" to="MarginContainer/SettingsMenu" method="_on_back_button_pressed"]
