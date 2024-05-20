@@ -3,15 +3,24 @@ extends Node2D
 var player: Player
 @onready var count_down_label = %CountDownLabel
 @onready var music_player = %MusicPlayer
+@onready var game_over_overlay = %GameOverOverlay
+@onready var background = %Background
+
 var music_enabled
 
 func _ready():
+	start()
+
+func start():
+	game_over_overlay.visible = false
+	
 	music_enabled = Config.config.get_value(
 		Config.KEY_SECTION, Config.KEY_MUSIC_ENABLED
 	)
 	
 	player = preload("res://player/player.tscn").instantiate()
 	player.global_position = Vector2(180, 324)
+	player.game_over_happened.connect(game_over)
 	add_child(player)
 
 	%Boundary.global_position.x = player.global_position.x
@@ -45,7 +54,20 @@ func spawn_enemy():
 	enemy.global_position.x = player.global_position.x + 1200
 	enemy.global_position.y = randf_range(0.0, 648.0)
 	add_child(enemy)
-
+	
+func game_over():
+	music_player.stop()
+	game_over_overlay.visible = true
+	background.game_over()
+	
 
 func _on_music_player_finished():
 	music_player.play(4)
+
+
+func _on_play_again_button_pressed():
+	get_tree().reload_current_scene()
+
+
+func _on_return_to_menu_button_pressed():
+	get_tree().change_scene_to_file("res://menu/menu.tscn")

@@ -15,6 +15,8 @@ var start_seconds_elapsed = 0
 
 var sound_effects_enabled
 
+signal game_over_happened
+
 func _ready():
 	start_timer.start()
 	%AnimationPlayer.play("fly")
@@ -49,7 +51,8 @@ func _physics_process(delta):
 
 
 func _on_jump_cooldown_timeout():
-	can_jump = true
+	if not is_game_over:
+		can_jump = true
 
 func game_over():
 	if is_game_over:
@@ -63,6 +66,7 @@ func game_over():
 		sound_effects_player.stream = AudioStreamOggVorbis.load_from_file("res://player/sounds/data_sounds_hurt.ogg")
 		sound_effects_player.volume_db = 2.5
 		sound_effects_player.play()
+	game_over_happened.emit()
 
 
 func _on_start_timer_timeout():

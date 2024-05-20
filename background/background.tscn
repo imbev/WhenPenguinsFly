@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://4hc618o25cbk"]
+[gd_scene load_steps=5 format=3 uid="uid://4hc618o25cbk"]
 
 [ext_resource type="Texture2D" uid="uid://f745bwbqra6i" path="res://background/cloud-mountains-background.png" id="1_ivto4"]
+[ext_resource type="Script" path="res://background/background.gd" id="1_mwt3i"]
 
 [sub_resource type="Animation" id="Animation_jhupm"]
 resource_name = "scroll"
@@ -24,6 +25,7 @@ _data = {
 
 [node name="Background" type="Node2D"]
 position = Vector2(472, 872)
+script = ExtResource("1_mwt3i")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -33,7 +35,6 @@ libraries = {
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-unique_name_in_owner = true
 motion_mirroring = Vector2(1670.42, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
@@ -44,3 +45,20 @@ texture = ExtResource("1_ivto4")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1670.42, 413.746)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BlackRect" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="DarkenTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.01
+
+[connection signal="timeout" from="DarkenTimer" to="." method="_on_darken_timer_timeout"]
