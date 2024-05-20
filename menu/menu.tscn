@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsma5h03j1xhi"]
+[gd_scene load_steps=5 format=3 uid="uid://dsma5h03j1xhi"]
 
+[ext_resource type="Texture2D" uid="uid://f745bwbqra6i" path="res://background/cloud-mountains-background.png" id="1_j30kl"]
 [ext_resource type="Script" path="res://menu/MainMenu.gd" id="1_m1axd"]
 [ext_resource type="Script" path="res://menu/SettingsMenu.gd" id="2_5iux5"]
 [ext_resource type="Script" path="res://menu/AboutMenu.gd" id="3_7wvdk"]
@@ -13,6 +14,15 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -80.0
+offset_top = -381.0
+offset_right = 951.0
+offset_bottom = 1440.0
+scale = Vector2(8.52927, 3.13859)
+texture = ExtResource("1_j30kl")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
