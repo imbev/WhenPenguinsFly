@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2024 Isaac Beverly -->
 <component type="desktop-application">
-  <id>io.github.imbev.WhenPenguinsFly</id>
+  <id>page.codeberg.imbev.WhenPenguinsFly</id>
   
   <name>When Penguins Fly</name>
   <summary>Tux the penguin learns to fly</summary>
@@ -35,7 +35,7 @@
     <keyword>tux</keyword>
   </keywords>
   
-  <launchable type="desktop-id">io.github.imbev.WhenPenguinsFly.desktop</launchable>
+  <launchable type="desktop-id">page.codeberg.imbev.WhenPenguinsFly.desktop</launchable>
 
   <screenshots>
     <screenshot type="default">
@@ -52,7 +52,7 @@
     </screenshot>
   </screenshots>
 
-  <icon type="local">/app/share/icons/hicolor/scalable/apps/io.github.imbev.WhenPenguinsFly.svg</icon>
+  <icon type="local">/app/share/icons/hicolor/scalable/apps/page.codeberg.imbev.WhenPenguinsFly.svg</icon>
 
   <branding>
     <color type="primary" scheme_preference="light">#a5bfbf</color>
