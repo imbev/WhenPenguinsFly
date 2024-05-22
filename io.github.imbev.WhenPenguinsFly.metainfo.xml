@@ -52,7 +52,7 @@
     </screenshot>
   </screenshots>
 
-  <icon type="stock">io.github.imbev.WhenPenguinsFly</icon>
+  <icon type="local">/app/share/icons/hicolor/scalable/apps/io.github.imbev.WhenPenguinsFly.svg</icon>
 
   <branding>
     <color type="primary" scheme_preference="light">#a5bfbf</color>
