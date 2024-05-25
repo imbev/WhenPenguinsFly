@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dsma5h03j1xhi"]
 
 [ext_resource type="Texture2D" uid="uid://f745bwbqra6i" path="res://assets/images/cloud-mountains-background.png" id="1_j30kl"]
-[ext_resource type="Script" path="res://menu/MainMenu.gd" id="1_m1axd"]
-[ext_resource type="Script" path="res://menu/SettingsMenu.gd" id="2_5iux5"]
-[ext_resource type="Script" path="res://menu/AboutMenu.gd" id="3_7wvdk"]
+[ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_m1axd"]
+[ext_resource type="Script" path="res://scripts/SettingsMenu.gd" id="2_5iux5"]
+[ext_resource type="Script" path="res://scripts/AboutMenu.gd" id="3_7wvdk"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3

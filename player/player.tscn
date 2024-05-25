@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://4pn774jxveun"]
 
-[ext_resource type="Script" path="res://player/player.gd" id="1_ujr83"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_ujr83"]
 [ext_resource type="Texture2D" uid="uid://7py57vy57h6s" path="res://assets/images/backflip-1.png" id="2_l2m0v"]
 [ext_resource type="Texture2D" uid="uid://bchwm4ohvg8xl" path="res://assets/images/fly/swim-0.png" id="3_lrwh3"]
 [ext_resource type="Texture2D" uid="uid://cfqie7wev8uvk" path="res://assets/images/fly/swim-1.png" id="4_srof6"]

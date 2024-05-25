@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bsr7pil8jetlk"]
 
-[ext_resource type="Script" path="res://boundary/boundary.gd" id="1_4cg31"]
+[ext_resource type="Script" path="res://scripts/boundary.gd" id="1_4cg31"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q44bh"]
 

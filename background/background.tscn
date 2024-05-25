@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://4hc618o25cbk"]
 
-[ext_resource type="Script" path="res://background/background.gd" id="1_svxr0"]
+[ext_resource type="Script" path="res://scripts/background.gd" id="1_svxr0"]
 [ext_resource type="Texture2D" uid="uid://f745bwbqra6i" path="res://assets/images/cloud-mountains-background.png" id="2_qvs3d"]
 
 [sub_resource type="Animation" id="Animation_jhupm"]
