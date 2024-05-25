@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bchwm4ohvg8xl"
-path="res://.godot/imported/swim-0.png-64ad66954d4f5f6a7e08afd0fc614de0.ctex"
+uid="uid://7py57vy57h6s"
+path="res://.godot/imported/backflip-1.png-981165285d7e166a2c74c5c79a8cc837.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/fly/swim-0.png"
-dest_files=["res://.godot/imported/swim-0.png-64ad66954d4f5f6a7e08afd0fc614de0.ctex"]
+source_file="res://assets/images/backflip-1.png"
+dest_files=["res://.godot/imported/backflip-1.png-981165285d7e166a2c74c5c79a8cc837.ctex"]
 
 [params]
 

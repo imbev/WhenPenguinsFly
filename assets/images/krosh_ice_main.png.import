@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfqie7wev8uvk"
-path="res://.godot/imported/swim-1.png-3716a14b81b0138169127c9da03256da.ctex"
+uid="uid://dw6b0qlpqbjdo"
+path="res://.godot/imported/krosh_ice_main.png-343f18d8b41de1fd11e27a41e02f2fbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/fly/swim-1.png"
-dest_files=["res://.godot/imported/swim-1.png-3716a14b81b0138169127c9da03256da.ctex"]
+source_file="res://assets/images/krosh_ice_main.png"
+dest_files=["res://.godot/imported/krosh_ice_main.png-343f18d8b41de1fd11e27a41e02f2fbe.ctex"]
 
 [params]
 

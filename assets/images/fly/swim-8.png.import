@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc0vb8yfpj8xl"
-path="res://.godot/imported/swim-8.png-23a43ba3e5971e5b1846ff5cc4f33ada.ctex"
+path="res://.godot/imported/swim-8.png-4e4525d5330f43bb142331f728423f88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/fly/swim-8.png"
-dest_files=["res://.godot/imported/swim-8.png-23a43ba3e5971e5b1846ff5cc4f33ada.ctex"]
+source_file="res://assets/images/fly/swim-8.png"
+dest_files=["res://.godot/imported/swim-8.png-4e4525d5330f43bb142331f728423f88.ctex"]
 
 [params]
 

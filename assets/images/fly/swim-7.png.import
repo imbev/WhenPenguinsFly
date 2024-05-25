@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f745bwbqra6i"
-path="res://.godot/imported/cloud-mountains-background.png-f4e70236238f217f063596fc54a01d91.ctex"
+uid="uid://baxhjccrnydgn"
+path="res://.godot/imported/swim-7.png-d0cd3482b22dbcc5e545e16005040c1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/cloud-mountains-background.png"
-dest_files=["res://.godot/imported/cloud-mountains-background.png-f4e70236238f217f063596fc54a01d91.ctex"]
+source_file="res://assets/images/fly/swim-7.png"
+dest_files=["res://.godot/imported/swim-7.png-d0cd3482b22dbcc5e545e16005040c1f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7py57vy57h6s"
-path="res://.godot/imported/backflip-1.png-4a9b743077fd2c5796f3caf454d1b953.ctex"
+uid="uid://xv1hoxmraxwf"
+path="res://.godot/imported/krosh_corrupt_main.png-854f2398504ea551674b83c46897b050.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/backflip-1.png"
-dest_files=["res://.godot/imported/backflip-1.png-4a9b743077fd2c5796f3caf454d1b953.ctex"]
+source_file="res://assets/images/krosh_corrupt_main.png"
+dest_files=["res://.godot/imported/krosh_corrupt_main.png-854f2398504ea551674b83c46897b050.ctex"]
 
 [params]
 

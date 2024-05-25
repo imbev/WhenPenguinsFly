@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw6b0qlpqbjdo"
-path="res://.godot/imported/krosh_ice_main.png-ad150e6704f9a47b352ffbc51bd91796.ctex"
+uid="uid://isgnctvg6lh5"
+path="res://.godot/imported/krosh_rock_main.png-1ed3dbfd14ac2cf121aba77dc60f249b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemy/krosh_ice_main.png"
-dest_files=["res://.godot/imported/krosh_ice_main.png-ad150e6704f9a47b352ffbc51bd91796.ctex"]
+source_file="res://assets/images/krosh_rock_main.png"
+dest_files=["res://.godot/imported/krosh_rock_main.png-1ed3dbfd14ac2cf121aba77dc60f249b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://isgnctvg6lh5"
-path="res://.godot/imported/krosh_rock_main.png-ce59bab5763f726b56fbb786031e9349.ctex"
+uid="uid://cfqie7wev8uvk"
+path="res://.godot/imported/swim-1.png-023a1c1161e7c79659dbdfa05e4b0240.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemy/krosh_rock_main.png"
-dest_files=["res://.godot/imported/krosh_rock_main.png-ce59bab5763f726b56fbb786031e9349.ctex"]
+source_file="res://assets/images/fly/swim-1.png"
+dest_files=["res://.godot/imported/swim-1.png-023a1c1161e7c79659dbdfa05e4b0240.ctex"]
 
 [params]
 

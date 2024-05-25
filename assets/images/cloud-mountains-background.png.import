@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xv1hoxmraxwf"
-path="res://.godot/imported/krosh_corrupt_main.png-113904d5a6d29fdab5899988bca2f07e.ctex"
+uid="uid://f745bwbqra6i"
+path="res://.godot/imported/cloud-mountains-background.png-dc9f0b9847b3cf2601079a09f04356ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemy/krosh_corrupt_main.png"
-dest_files=["res://.godot/imported/krosh_corrupt_main.png-113904d5a6d29fdab5899988bca2f07e.ctex"]
+source_file="res://assets/images/cloud-mountains-background.png"
+dest_files=["res://.godot/imported/cloud-mountains-background.png-dc9f0b9847b3cf2601079a09f04356ba.ctex"]
 
 [params]
 

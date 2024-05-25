@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://fhnxqqhik7vj"]
 
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_usw2t"]
-[ext_resource type="Texture2D" uid="uid://dw6b0qlpqbjdo" path="res://enemy/krosh_ice_main.png" id="2_b05x8"]
+[ext_resource type="Texture2D" uid="uid://dw6b0qlpqbjdo" path="res://assets/images/krosh_ice_main.png" id="2_b05x8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cucpr"]
 radius = 65.0

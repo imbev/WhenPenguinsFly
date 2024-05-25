@@ -3,9 +3,9 @@ extends Area2D
 func _ready():
 	
 	var textures = [
-		preload("res://enemy/krosh_corrupt_main.png"),
-		preload("res://enemy/krosh_ice_main.png"),
-		preload("res://enemy/krosh_rock_main.png")
+		preload("res://assets/images/krosh_corrupt_main.png"),
+		preload("res://assets/images/krosh_ice_main.png"),
+		preload("res://assets/images/krosh_rock_main.png")
 	]
 	var texture_index = randi_range(0, 2)
 	%Sprite2D.texture = textures[texture_index]

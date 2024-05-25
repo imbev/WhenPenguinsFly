@@ -40,7 +40,7 @@ func _physics_process(delta):
 		can_jump = false
 		%JumpCooldown.start()
 		if sound_effects_enabled:
-			sound_effects_player.stream = preload("res://player/sounds/data_sounds_pop.ogg")
+			sound_effects_player.stream = preload("res://assets/sound_effects/data_sounds_pop.ogg")
 			sound_effects_player.volume_db = -10.0
 			sound_effects_player.play()
 	
@@ -63,7 +63,7 @@ func game_over():
 	%AnimatedSprite2D.hide()
 	%AnimationPlayer.play("game_over")
 	if sound_effects_enabled:
-		sound_effects_player.stream = preload("res://player/sounds/data_sounds_hurt.ogg")
+		sound_effects_player.stream = preload("res://assets/sound_effects/data_sounds_hurt.ogg")
 		sound_effects_player.volume_db = 2.5
 		sound_effects_player.play()
 	game_over_happened.emit()

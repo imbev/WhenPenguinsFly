@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://4hc618o25cbk"]
 
-[ext_resource type="Texture2D" uid="uid://f745bwbqra6i" path="res://background/cloud-mountains-background.png" id="1_ivto4"]
-[ext_resource type="Script" path="res://background/background.gd" id="1_mwt3i"]
+[ext_resource type="Script" path="res://background/background.gd" id="1_svxr0"]
+[ext_resource type="Texture2D" uid="uid://f745bwbqra6i" path="res://assets/images/cloud-mountains-background.png" id="2_qvs3d"]
 
 [sub_resource type="Animation" id="Animation_jhupm"]
 resource_name = "scroll"
@@ -25,7 +25,7 @@ _data = {
 
 [node name="Background" type="Node2D"]
 position = Vector2(472, 872)
-script = ExtResource("1_mwt3i")
+script = ExtResource("1_svxr0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -41,7 +41,7 @@ motion_mirroring = Vector2(1670.42, 0)
 texture_repeat = 2
 position = Vector2(-319, 0)
 scale = Vector2(1.53391, 1.5908)
-texture = ExtResource("1_ivto4")
+texture = ExtResource("2_qvs3d")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1670.42, 413.746)
