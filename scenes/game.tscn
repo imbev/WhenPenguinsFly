@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dhsyim1ws7jr7"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_k501y"]
-[ext_resource type="PackedScene" uid="uid://4hc618o25cbk" path="res://background/background.tscn" id="2_nac1h"]
-[ext_resource type="PackedScene" uid="uid://bsr7pil8jetlk" path="res://boundary/boundary.tscn" id="3_8gr2b"]
+[ext_resource type="PackedScene" uid="uid://4hc618o25cbk" path="res://scenes/background.tscn" id="2_nac1h"]
+[ext_resource type="PackedScene" uid="uid://bsr7pil8jetlk" path="res://scenes/boundary.tscn" id="3_8gr2b"]
 [ext_resource type="AudioStream" uid="uid://dn7jhgksaiha2" path="res://assets/music/airship_remix.ogg" id="4_g2b5c"]
 
 [node name="Game" type="Node2D"]

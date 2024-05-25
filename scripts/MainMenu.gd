@@ -10,7 +10,7 @@ func _ready():
 	settings_menu.visible = false
 
 func _on_play_button_pressed():
-	get_tree().change_scene_to_file("res://game/game.tscn")
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
 	
 func _on_about_button_pressed():
 	about_menu.visible = true

@@ -18,7 +18,7 @@ func start():
 		Config.KEY_SECTION, Config.KEY_MUSIC_ENABLED
 	)
 	
-	player = preload("res://player/player.tscn").instantiate()
+	player = preload("res://scenes/player.tscn").instantiate()
 	player.global_position = Vector2(180, 324)
 	player.game_over_happened.connect(game_over)
 	add_child(player)
@@ -50,7 +50,7 @@ func _on_enemy_spawn_timer_timeout():
 	%EnemySpawnTimer.start()
 	
 func spawn_enemy():
-	var enemy = preload("res://enemy/enemy.tscn").instantiate()
+	var enemy = preload("res://scenes/enemy.tscn").instantiate()
 	enemy.global_position.x = player.global_position.x + 1200
 	enemy.global_position.y = randf_range(0.0, 648.0)
 	add_child(enemy)
@@ -70,4 +70,4 @@ func _on_play_again_button_pressed():
 
 
 func _on_return_to_menu_button_pressed():
-	get_tree().change_scene_to_file("res://menu/menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
