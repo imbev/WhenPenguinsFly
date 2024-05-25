@@ -174,6 +174,11 @@ horizontal_alignment = 1
 [node name="LicenseLabel" type="Label" parent="MarginContainer/VBoxContainer/AboutMenu/VBoxContainer"]
 layout_mode = 2
 text = "Copyright (c) 2024 Isaac Beverly
+
+Copyright (c) 2014-present Godot Engine contributors.
+
+ Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+
 GNU General Public License Version 3"
 horizontal_alignment = 1
 
