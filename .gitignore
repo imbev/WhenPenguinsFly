@@ -3,3 +3,12 @@
 
 # Misc
 dist/
+
+/.cache
+/include/*.gch
+/include/*.pch
+/src/*.o
+/vendor
+/compile_commands.json
+/events.json
+/when_penguins_fly
