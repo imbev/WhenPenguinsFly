@@ -1,3 +1,4 @@
+* fonts/Roboto-Regular.ttf - Copyright (c) 2017 Google LLC - GPL version 3 or later
 
 * images/cloud-mountains-*.png - Copyright (c) 2019 Jason Lavallée - GPL version 2 or later
 
